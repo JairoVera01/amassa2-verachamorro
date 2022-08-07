@@ -3,6 +3,9 @@ import "./navBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
 
 const navBar = () => {
+
+    
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-amassa2">

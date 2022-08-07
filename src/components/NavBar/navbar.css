@@ -12,5 +12,10 @@
     height: 3.5rem;
     border-radius:5rem;    
     margin-left: 10px;
+    transition: all 1s;
     border: white solid;
+}
+
+.navBarLogo:hover{
+    transform: translate(0.5rem);
 }
