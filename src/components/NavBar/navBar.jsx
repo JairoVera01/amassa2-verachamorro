@@ -1,12 +1,15 @@
 import React from 'react'
-import "./navbar.css"
+import "./navBar.css"
+import logoAmassa2 from "./amassa2Logo.png";
 
 const navBar = () => {
-  return (
-    <div>
+    return (
+        <div>
             <nav className="navbar navbar-expand-lg bg-amassa2">
                 <div className="container">
-                    <a className="navbar-brand" href=".">Amassa2</a>
+                    <a className="navbar-brand" href=".">
+                        <img src={logoAmassa2} alt="logo" className="navBarLogo"/>
+                    </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -38,7 +41,7 @@ const navBar = () => {
                 </div>
             </nav>
         </div>
-  )
+    )
 }
 
 export default navBar

@@ -7,3 +7,10 @@
 .fontsBaloo{
     font-family: 'Baloo 2', cursive;
 }
+
+.navBarLogo{
+    height: 3.5rem;
+    border-radius:5rem;    
+    margin-left: 10px;
+    border: white solid;
+}
