@@ -1,9 +1,6 @@
-import React from 'react'
-
-function navBar() {
-    return (
-        <div>
-
+const navBar = () => {
+  return (
+    <div>
             <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container">
                     <a className="navbar-brand" href=".">Amassa2</a>
@@ -37,9 +34,8 @@ function navBar() {
                     </div>
                 </div>
             </nav>
-
         </div>
-    )
+  )
 }
 
 export default navBar
