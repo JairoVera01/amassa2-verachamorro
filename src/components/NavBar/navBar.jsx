@@ -4,7 +4,7 @@ import logoAmassa2 from "./amassa2Logo.png";
 
 const navBar = () => {
 
-    
+    const navBarItems = ["Inicio", "About Us", "Categorias","Login"]
 
     return (
         <div>
@@ -18,7 +18,12 @@ const navBar = () => {
                     </button>
                     <div className="collapse navbar-collapse fontsBaloo" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            {navBarItems.map((item)=>(
+                                <li className="nav-item">
+                                    <a className="nav-link mt-1" href=".">{item}</a>
+                                </li>
+                            ))}
+                            {/* <li className="nav-item">
                                 <a className="nav-link active mt-1" aria-current="page" href=".">Inicio</a>
                             </li>
                             <li className="nav-item">
@@ -34,7 +39,7 @@ const navBar = () => {
                                     
                                     <li><a className="dropdown-item" href=".">Cheesecake</a></li>
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"></input>
