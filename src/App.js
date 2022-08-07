@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from "./components/NavBar/navBar";
 
 function App() {
   return (
     <div className="App">
+      <NavBar/>
       <header className="App-header">
+      
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <span>Proyecto para ReactJs - Amassa2 Tienda de postres</span>
-        </p>
+        <h1 className="">
+          Proyecto para ReactJs - Amassa2 Tienda de postres
+        </h1>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -17,8 +20,10 @@ function App() {
         >
           Learn React
         </a>
+        
       </header>
-    </div>
+      
+    </div>   
   );
 }
 
