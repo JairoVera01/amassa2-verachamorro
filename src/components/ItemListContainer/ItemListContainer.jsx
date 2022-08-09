@@ -4,11 +4,11 @@ const ItemListContainer = (props) => {
     return (
         <div>
             <div>
-                <p>{props.greeting}</p>
+                <p className="fw-italic">{props.greeting}</p>
             </div>
             <br />
             <div>
-                <p>
+                <p className="fw-bold">
                 Bienvenido usuario {props.usuario}
                 </p>
             </div>
