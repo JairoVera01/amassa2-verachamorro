@@ -1,10 +1,12 @@
 import React from 'react'
 import "./navBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
+import CartWidget from '../CartWidget/cartWidget';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 const navBar = () => {
 
-    const navBarItems = ["Inicio", "About Us", "Categorias","Login"]
+    const navBarItems = ["Inicio", "About Us", "Categorias","Login","Register","Contacto"]
 
     return (
         <div>
@@ -20,15 +22,10 @@ const navBar = () => {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             {navBarItems.map((item)=>(
                                 <li className="nav-item">
-                                    <a className="nav-link mt-1" href=".">{item}</a>
+                                    <a className="nav-link mt-1" href=".  ">{item}</a>
                                 </li>
-                            ))}
-                            {/* <li className="nav-item">
-                                <a className="nav-link active mt-1" aria-current="page" href=".">Inicio</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link mt-1" href=".">Tienda</a>
-                            </li>
+                            ))} 
+                            {/* 
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle mt-1" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorias
@@ -40,14 +37,13 @@ const navBar = () => {
                                     <li><a className="dropdown-item" href=".">Cheesecake</a></li>
                                 </ul>
                             </li> */}
+                            
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"></input>
-                                <button className="btn btn-outline-light" type="submit">Buscar</button>
-                        </form>
+                        <CartWidget/>
                     </div>
                 </div>
             </nav>
+            <ItemListContainer greeting="Uso de props para envio de información" usuario="Jairo_Vera"/>
         </div>
     )
 }
