@@ -3,11 +3,14 @@ import "./navBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
 import CartWidget from '../CartWidget/cartWidget';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import ItemCount from "../ItemCount/ItemCount";
+
 
 const navBar = () => {
-
     const navBarItems = ["Inicio", "About Us", "Categorias","Login","Register","Contacto"]
-
+    const onAdd = () =>{
+        console.log("Soy onAdd");
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-amassa2">
@@ -44,6 +47,9 @@ const navBar = () => {
                 </div>
             </nav>
             <ItemListContainer greeting="Uso de props para envio de información" usuario="Jairo_Vera"/>
+            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+            <ItemCount stock={0} initial={1} onAdd={onAdd}/>
+            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
         </div>
     )
 }
