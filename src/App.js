@@ -1,28 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import NavBar from "./components/NavBar/navBar";
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
+
 
 function App() {
+  const onAdd = () =>{
+    console.log("Soy onAdd");
+  }
   return (
     <div className="App">
       <NavBar/>
-      <header className="App-header">
-      
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="">
-          Proyecto para ReactJs - Amassa2 Tienda de postres
-        </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        
-      </header>
-      
+      <ItemListContainer/>
+      <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+      <ItemCount stock={0} initial={1} onAdd={onAdd}/>
+      <ItemCount stock={10} initial={1} onAdd={onAdd}/>
     </div>   
   );
 }
