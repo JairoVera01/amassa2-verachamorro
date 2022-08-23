@@ -12,8 +12,9 @@ function App() {
   return (
     <div className="App ">
       <NavBar/>
-      {/* <ItemListContainer/> */}
-      <div className="container">
+      <ItemListContainer/>
+      <hr></hr>
+      <div className="container mt-5">
         <div className="row  text-center">
           <div className="col">
             <ItemCount stock={5} initial={1} onAdd={onAdd}/>
