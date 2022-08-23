@@ -7,15 +7,25 @@ import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   const onAdd = () =>{
-    console.log("Soy onAdd");
+    
   }
   return (
-    <div className="App">
+    <div className="App ">
       <NavBar/>
-      <ItemListContainer/>
-      <ItemCount stock={5} initial={1} onAdd={onAdd}/>
-      <ItemCount stock={0} initial={1} onAdd={onAdd}/>
-      <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+      {/* <ItemListContainer/> */}
+      <div className="container">
+        <div className="row  text-center">
+          <div className="col">
+            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+          </div>
+          <div className="col">
+            <ItemCount stock={0} initial={1} onAdd={onAdd}/>
+          </div>
+          <div className="col">
+            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+          </div>
+        </div>
+      </div>
     </div>   
   );
 }
