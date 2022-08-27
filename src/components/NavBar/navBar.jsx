@@ -3,8 +3,6 @@ import "./navBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
 import CartWidget from '../CartWidget/cartWidget';
 
-
-
 const navBar = () => {
     const navBarItems = ["Inicio", "About Us", "Categorias","Login","Register","Contacto"]
     
