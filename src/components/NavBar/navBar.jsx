@@ -8,7 +8,7 @@ const navBar = () => {
     
     return (
         <div>
-            <nav className="navbar navbar-expand-lg bg-amassa2">
+            <nav className="navbar navbar-expand-lg bg-amassa2 fixed-top">
                 <div className="container">
                     <a className="navbar-brand" href=".">
                         <img src={logoAmassa2} alt="logo" className="navBarLogo"/>

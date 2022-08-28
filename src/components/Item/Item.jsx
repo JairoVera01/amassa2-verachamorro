@@ -2,7 +2,7 @@ import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import {Link} from 'react-router-dom'
 
-const Item = ({id,producto,precio,cantidad,imgUrl}) => {
+const Item = ({id,nombre,precio,stock,imgUrl,descripcion,categoria}) => {
   const onAdd = (contador) =>{
     alert("Se agregaron "+ contador)
   }
@@ -16,7 +16,7 @@ const Item = ({id,producto,precio,cantidad,imgUrl}) => {
     <div className="col mt-4">
       <div className="card mb-4 rounded-3 shadow-sm">
           <div className="card-header py-3">
-            <h4 className="my-0 fw-normal">{producto}</h4>
+            <h4 className="my-0 fw-normal">{nombre}</h4>
           </div>
           <div className="card-body">
             <h1 className="card-title pricing-card-title">S/.{precio}</h1>
@@ -25,7 +25,7 @@ const Item = ({id,producto,precio,cantidad,imgUrl}) => {
             </Link>
             <br></br>
             <small className="text-muted fw-light">SKU {crearSkuAleatorio()+1}</small>
-            <ItemCount stock={cantidad} initial={1} onAdd={onAdd}/>
+            <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
             <Link to={`/item/${id}`}>
               <button className="btn btn-dark mt-2">Ver detalles</button>
             </Link>

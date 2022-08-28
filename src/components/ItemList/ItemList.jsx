@@ -4,9 +4,9 @@ import Item from '../Item/Item'
 
 const ItemList = ({items}) => {
   return (
-    <div className="row">
+    <div className="row row-cols-1 row-cols-md-3">
       {items.map((item,index)=>
-        <Item key={index} id={item.id} producto={item.producto} precio={item.precio} cantidad={item.cantidad} imgUrl={item.imgUrl} />
+        <Item key={index} id={item.id} nombre={item.nombre} precio={item.precio} stock={item.stock} imgUrl={item.imgUrl} descripcion={item.descripcion} categoria={item.categoria}/>
       )}
     </div>
     
