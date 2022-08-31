@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Hero from '../Hero/Hero';
 import "./ItemListContainer.css"
 import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
     const [items,setItems] = useState([]);
-
+    const {categoriaid} = useParams();
     useEffect(() => {
         let productos = [
             {
@@ -113,7 +114,7 @@ const ItemListContainer = () => {
                 precio:9,
                 stock:16,
                 imgUrl:"https://i.imgur.com/Iwbl7FK.jpg",
-                descriocion:"Porción de pie de manzana. Preparado con los mejores ingredientes.",
+                descripcion:"Porción de pie de manzana. Preparado con los mejores ingredientes.",
                 categoria:"Postres"
             },
             {
@@ -122,7 +123,7 @@ const ItemListContainer = () => {
                 precio:6,
                 stock:7,
                 imgUrl:"https://i.imgur.com/sYGrw1K.jpg",
-                descriocion:"Porción de arroz con leche. Preparado con los mejores ingredientes.",
+                descripcion:"Porción de arroz con leche. Preparado con los mejores ingredientes.",
                 categoria:"Postres"
             },
             {
@@ -131,19 +132,20 @@ const ItemListContainer = () => {
                 precio:9,
                 stock:6,
                 imgUrl:"https://i.imgur.com/357S7Cm.jpg",
-                descriocion:"Porcion de tres leches. Preparado con los mejores ingredientes",
+                descripcion:"Porcion de tres leches. Preparado con los mejores ingredientes",
                 categoria:"Postres"
             }
         ];
         new Promise ((resolve)=>{
+            let productosFilter = [];
             setTimeout(()=>{
-                resolve(productos);
+                productosFilter = categoriaid ? productos.filter((element)=>element.categoria == categoriaid) : productos;
+                resolve(productosFilter);
             }, 500)
         }).then((data)=>{
-            
             setItems(data);
         })
-    }, [])
+    }, [categoriaid])
     return (
         <div>
             { items.length ?  
