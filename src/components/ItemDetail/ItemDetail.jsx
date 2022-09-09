@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({item}) => {
+
     const {id,nombre,precio,stock,imgUrl,descripcion,categoria } = item;
+    const {addItem} = useContext(CartContext);
     const [counter,setCounter]=useState(0);
     
     function onAdd (contador) {
         alert(`Se agregaron ${contador} u. de  ${nombre} `);
-        setCounter(contador) 
+        setCounter(contador);
+        addItem(item, contador);
     }
 
     return (
@@ -18,7 +22,7 @@ const ItemDetail = ({item}) => {
                     <div className="row">
                         <div className="col">
                             <img src={imgUrl} alt="" className=" w-75 img-thumbnail rounded "/>
-                            { counter ? <Link to="/cart"> <button>Finalizar Compra</button> </Link> :<ItemCount stock={stock} initial={1} onAdd={onAdd}  />}
+                            { counter ? <Link to="/Cart"> <button>Finalizar Compra</button> </Link> :<ItemCount stock={stock} initial={1} onAdd={onAdd}  />}
                         </div>
                         <div className="col text-start">
                             <p>{nombre}</p>
