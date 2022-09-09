@@ -10,7 +10,6 @@ export function CartProvider({children}) {
     function addItem(item,cantidad) {
         console.log({...item,cantidad});
         if (isInCart(item.id)) {
-            console.log('soy duplicado')
             let aux = items;
             console.log(aux)
             let itemIndex = aux.findIndex((element) => element.id == item.id);
@@ -18,7 +17,6 @@ export function CartProvider({children}) {
             aux[itemIndex].cantidad += cantidad;
             setItems([...aux])
         } else {
-            console.log('soy nuevo')
             setItems([...items, { ...item, cantidad }]);
         }
         
