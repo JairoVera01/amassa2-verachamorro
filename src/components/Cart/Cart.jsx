@@ -39,7 +39,7 @@ const Cart = () => {
             <hr />
             Precio total de la compra = S/.{items.reduce((pv,cv)=> pv + (cv.precio*cv.quantity),0)}
             <div>
-                <button onClick={clear}>Limpiar</button>
+                <button className="btn btn-dark" onClick={clear}>Limpiar</button>
             </div>
         </div>
     </>

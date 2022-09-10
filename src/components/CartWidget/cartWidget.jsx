@@ -13,7 +13,7 @@ const CartWidget = () => {
             <Link  to="/cart">
                 <button className="btn btn-outline-light iconCart" type=""><i className="bi bi-cart "></i>
                 <span>
-                    {/* {items.recuce((pc,cv)=>pv+cv.quantity,0)} */}
+                    {items.reduce((pv,cv)=> pv + cv.quantity,0)}
                 </span>
                 </button>
             </Link>

@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./navBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 
-const navBar = () => {
-    const navBarItems = ["Inicio"]
+
+const NavBar = () => {
+    // const navBarItems = ["Inicio"]
     const categoriaDesglose = ["Alfajores","Chocotejas","Postres"]
+    const {items} = useContext(CartContext);
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-amassa2 fixed-top">
@@ -22,11 +25,11 @@ const navBar = () => {
                     </button>
                     <div className="collapse navbar-collapse fontsBaloo" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            {navBarItems.map((item)=>(
+                            {/* {navBarItems.map((item)=>(
                                 <li className="nav-item">
                                     <a className="nav-link mt-1" href="/">{item}</a>
                                 </li>
-                            ))} 
+                            ))}  */}
                             
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle mt-1" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,7 +43,7 @@ const navBar = () => {
                             </li>
                             
                         </ul>
-                        <CartWidget/>
+                        {!!items.length &&<CartWidget/>}
                     </div>
                 </div>
             </nav>
@@ -49,5 +52,5 @@ const navBar = () => {
     )
 }
 
-export default navBar
+export default NavBar
 
