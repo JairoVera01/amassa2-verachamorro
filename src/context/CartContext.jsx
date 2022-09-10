@@ -7,23 +7,20 @@ export function CartProvider({children}) {
 
     const [items, setItems ] = useState([]);
 
-    function addItem(item,cantidad) {
-        console.log({...item,cantidad});
+    function addItem(item,quantity) {
+        
         if (isInCart(item.id)) {
             let aux = items;
-            console.log(aux)
-            let itemIndex = aux.findIndex((element) => element.id == item.id);
-            console.log(`Mi index es ${itemIndex}`)
-            aux[itemIndex].cantidad += cantidad;
+            let itemIndex = aux.findIndex((element) => element.id === item.id);
+            aux[itemIndex].quantity += quantity;
             setItems([...aux])
         } else {
-            setItems([...items, { ...item, cantidad }]);
+            setItems([...items, { ...item, quantity }]);
         }
-        
     }
 
     function removeItem(itemId) {
-        
+        setItems(items.filter((element) => element.id !== itemId))
     }
 
     function clear() {
@@ -31,15 +28,10 @@ export function CartProvider({children}) {
     }
 
     function isInCart(itemId) {
-        if (!!items) {
-            return items.some((element) => element.id == itemId);
-
-        }else{
-            return false
-        }
+        return items.find((element) => element.id === itemId);
     }
 
-    return <CartContext.Provider value={{addItem,removeItem, items}}>
+    return (<CartContext.Provider value={{addItem,removeItem, items,clear}}>
         {children}
-    </CartContext.Provider>
+    </CartContext.Provider>)
 }

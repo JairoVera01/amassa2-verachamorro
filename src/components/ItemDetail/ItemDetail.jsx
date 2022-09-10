@@ -22,7 +22,9 @@ const ItemDetail = ({item}) => {
                     <div className="row">
                         <div className="col">
                             <img src={imgUrl} alt="" className=" w-75 img-thumbnail rounded "/>
-                            { counter ? <Link to="/Cart"> <button>Finalizar Compra</button> </Link> :<ItemCount stock={stock} initial={1} onAdd={onAdd}  />}
+                            {/* { counter ? <Link to="/Cart"> <button className="btn btn-dark">Finalizar Compra</button> </Link> :<ItemCount stock={stock} initial={1} onAdd={onAdd}  />} */}
+                            <ItemCount stock={stock} initial={1} onAdd={onAdd}  />
+                            <Link to="/cart"> <button className="btn btn-dark mt-4">Finalizar Compra</button> </Link> 
                         </div>
                         <div className="col text-start">
                             <p>{nombre}</p>

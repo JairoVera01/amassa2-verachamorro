@@ -21,7 +21,7 @@ const Item = ({id,nombre,precio,stock,imgUrl,descripcion,categoria}) => {
             <small className="text-muted fw-light">Categoria {categoria}</small>
             <p>Precio: S/.{precio}</p>
             <p>Stock disponible {stock} u.</p>
-            <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+            
             <Link to={`/item/${id}`}>
               <button className="btn btn-dark mt-2">Ver detalles</button>
             </Link>
