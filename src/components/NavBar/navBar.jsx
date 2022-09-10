@@ -1,7 +1,8 @@
 import React from 'react'
 import "./navBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
-import CartWidget from '../CartWidget/cartWidget';
+import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 
 const navBar = () => {
@@ -11,9 +12,11 @@ const navBar = () => {
         <div>
             <nav className="navbar navbar-expand-lg bg-amassa2 fixed-top">
                 <div className="container">
-                    <a className="navbar-brand" href="/">
-                        <img src={logoAmassa2} alt="logo" className="navBarLogo"/>
-                    </a>
+                    <Link to="/">
+                        <span className="navbar-brand" href="/">
+                            <img src={logoAmassa2} alt="logo" className="navBarLogo"/>
+                        </span>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

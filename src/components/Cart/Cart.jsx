@@ -2,9 +2,9 @@ import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
-
 const Cart = () => {
     const {items, removeItem, clear} =useContext(CartContext);
+    console.log(items);
     return (
     <>
         <div className="container">
@@ -17,8 +17,6 @@ const Cart = () => {
                     <button className="btn btn-dark ">Ir al inicio</button>
                 </Link>
             </p>:
-            
-                
                 items.length && <ol>
                     {items.map(((item,indx)=> 
                     <li key={indx}>

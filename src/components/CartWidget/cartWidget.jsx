@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 
-const cartWidget = () => {
+
+const CartWidget = () => {
+
+    const {items} = useContext(CartContext);
+
     return (
         <div>
             <div className="">
             <Link  to="/cart">
-                <button className="btn btn-outline-light iconCart" type=""><i className="bi bi-cart "></i></button>
-                </Link>
+                <button className="btn btn-outline-light iconCart" type=""><i className="bi bi-cart "></i>
+                <span>
+                    {/* {items.recuce((pc,cv)=>pv+cv.quantity,0)} */}
+                </span>
+                </button>
+            </Link>
             </div> 
         </div>
     )
 }
 
-export default cartWidget
+export default CartWidget
