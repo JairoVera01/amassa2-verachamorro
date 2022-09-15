@@ -1,10 +1,42 @@
-import React , {useContext} from 'react';
+
+
+import React , {useContext, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import db from '../../services'
+import { collection, getDocs } from 'firebase/firestore';
 
 const Cart = () => {
     const {items, removeItem, clear} =useContext(CartContext);
-    console.log(items);
+    // console.log(items);
+    
+
+    useEffect(() => {
+        const getColData = async() =>{
+
+
+            try {
+                const data = collection(db,"productos");
+                const col = await getDocs(data);
+                const res = col.docs.map((doc)=> doc.data())
+                console.log(res);
+            } catch (error) {
+                console.log(error);
+            }
+
+
+            
+            
+        } 
+        
+        getColData();
+
+        return () => {
+        
+        }
+    }, [])
+    
+
     return (
     <>
         <div className="container">
