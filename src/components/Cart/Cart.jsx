@@ -11,31 +11,6 @@ const Cart = () => {
     // console.log(items);
     
 
-    useEffect(() => {
-        const getColData = async() =>{
-
-
-            try {
-                const data = collection(db,"productos");
-                const col = await getDocs(data);
-                const res = col.docs.map((doc)=> doc.data())
-                console.log(res);
-            } catch (error) {
-                console.log(error);
-            }
-
-
-            
-            
-        } 
-        
-        getColData();
-
-        return () => {
-        
-        }
-    }, [])
-    
 
     return (
     <>

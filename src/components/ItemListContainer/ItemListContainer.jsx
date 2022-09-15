@@ -3,10 +3,32 @@ import Hero from '../Hero/Hero';
 import "./ItemListContainer.css"
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs } from 'firebase/firestore';
+import db from '../../services';
 
 const ItemListContainer = () => {
+    useEffect(() => {
+        const getColData = async() =>{
+
+            try {
+                const data = collection(db,"productos");
+                const col = await getDocs(data);
+                const res = col.docs.map((doc)=> doc={ id:doc.id,...doc.data() } )
+                console.log(res);
+            } catch (error) {
+                console.log(error);
+            }
+        } 
+        getColData();
+        return () => {
+        }
+    }, [])
+    
+
     const [items,setItems] = useState([]);
+
     const {categoriaid} = useParams();
+
     useEffect(() => {
         let productos = [
             {
