@@ -7,13 +7,16 @@ import { collection, getDocs } from 'firebase/firestore';
 import db from '../../services';
 
 const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([]);
+
     useEffect(() => {
         const getColData = async() =>{
-
             try {
                 const data = collection(db,"productos");
                 const col = await getDocs(data);
                 const res = col.docs.map((doc)=> doc={ id:doc.id,...doc.data() } )
+                setProductos(res)
                 console.log(res);
             } catch (error) {
                 console.log(error);
@@ -170,12 +173,18 @@ const ItemListContainer = () => {
     }, [categoriaid])
     return (
         <div>
-            { items.length ?  
+            {/* <div className="container mt-5 pt-5">
+                {productos.length > 0 && productos.map((item) => (
+                    <p>{item.nombre}</p>
+                ))}
+            </div> */}
+            
+            { productos.length ?  
                 <div className="">
                 <Hero/>
                 <div className="container mt-4">
                     <p className="tituloCatalogo">Nuestros productos</p>
-                    <ItemList items={items}/>
+                    <ItemList items={productos}/>
                 </div>
                 </div>   :
                 <div className="spinner-border text-dark container m-5" role="status">
