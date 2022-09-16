@@ -39,12 +39,6 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            {/* <div className="container mt-5 pt-5">
-                {productos.length > 0 && productos.map((item) => (
-                    <p>{item.nombre}</p>
-                ))}
-            </div> */}
-            
             { productos.length ?  
                 <div className="">
                 <Hero/>
@@ -54,8 +48,6 @@ const ItemListContainer = () => {
                 </div>
                 </div>   :
                 <div className="mt-5 pt-5"><div className="spinner-border text-dark container " role="status"></div>
-                
-
                 </div>
             }
         </div>
