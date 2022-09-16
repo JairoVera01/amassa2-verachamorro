@@ -20,13 +20,13 @@ const ItemListContainer = () => {
                 new Promise ((resolve)=>{
                     let productosFilter = [];
                     setTimeout(()=>{
-                        productosFilter = categoriaid ? productos.filter((element)=>element.categoria == categoriaid) : res;
+                        productosFilter = categoriaid ? res.filter((element)=>element.categoria === categoriaid) : res;
                         resolve(productosFilter);
                     }, 800)
                 }).then((res)=>{
                     setProductos(res);
                 })
-                console.log(res);
+                
             } catch (error) {
                 console.log(error);
             }
@@ -34,40 +34,8 @@ const ItemListContainer = () => {
         getColData();
         return () => {
         }
-    }, [])
+    }, [categoriaid])
     
-
-   
-
-    
-
-    // useEffect(() => {
-       
-            
-    //     //     {
-    //     //         id:"PO-MM",
-    //     //         nombre:"Mazamorra morada",
-    //     //         precio:6,
-    //     //         stock:6,
-    //     //         imgUrl:"https://i.imgur.com/fJvleKp.jpg",
-    //     //         descripcion:"Porción de mazamorra morada. Preparado con los mejores ingredientes.",
-    //     //         categoria:"Postres"
-    //     //     },
-            
-            
-            
-    //     // ];
-    //     new Promise ((resolve)=>{
-    //         let productosFilter = [];
-    //         setTimeout(()=>{
-    //             productosFilter = categoriaid ? productos.filter((element)=>element.categoria == categoriaid) : res;
-    //             resolve(productosFilter);
-    //         }, 800)
-    //     }).then((res)=>{
-    //         setProductos(res);
-    //     })
-    // }, [categoriaid])
-
 
     return (
         <div>
