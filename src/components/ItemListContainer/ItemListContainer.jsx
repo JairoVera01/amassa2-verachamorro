@@ -19,10 +19,10 @@ const ItemListContainer = () => {
                 // setProductos(res)
                 new Promise ((resolve)=>{
                     let productosFilter = [];
-                    setTimeout(()=>{
+                    
                         productosFilter = categoriaid ? res.filter((element)=>element.categoria === categoriaid) : res;
                         resolve(productosFilter);
-                    }, 800)
+                    
                 }).then((res)=>{
                     setProductos(res);
                 })
