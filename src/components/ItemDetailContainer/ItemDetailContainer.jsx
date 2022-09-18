@@ -34,19 +34,6 @@ const ItemDetailContainer = () => {
         }
     }, [id])
 
-    // useEffect(()=>{
-    //   
-    //     new Promise((resolve)=>{
-    //         setTimeout(()=>{
-    //             resolve(productos.find((element)=> element.id == id));
-                
-    //         }, 500)
-    //     }).then((data)=>{
-    //         setItem(data);
-    //     })
-    // },[id])
-
-
 
     return (
         <div>

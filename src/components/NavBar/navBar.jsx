@@ -9,7 +9,7 @@ import { CartContext } from '../../context/CartContext';
 
 const NavBar = () => {
     // const navBarItems = ["Inicio"]
-    const categoriaDesglose = ["Alfajores","Chocotejas","Postres"]
+    
     const {items} = useContext(CartContext);
     return (
         <div>
@@ -36,9 +36,15 @@ const NavBar = () => {
                                     Categorias
                                 </a>
                                 <ul className="dropdown-menu"> 
-                                    <li><a className="dropdown-item" href="/categoria/Alfajores">Alfajores</a></li>
-                                    <li><a className="dropdown-item" href="/categoria/Chocotejas">Chocotejas</a></li>  
-                                    <li><a className="dropdown-item" href="/categoria/Postres">Postres</a></li>
+                                    <Link to="/categoria/Alfajores">
+                                        <li><p className="dropdown-item enlaceCategorias">Alfajores</p></li>
+                                    </Link>
+                                    <Link to="/categoria/Chocotejas">
+                                        <li><p className="dropdown-item enlaceCategorias">Chocotejas</p></li>
+                                    </Link>
+                                    <Link to="/categoria/Postres">
+                                        <li><p className="dropdown-item enlaceCategorias">Postres</p></li>
+                                    </Link>
                                 </ul>
                             </li>
                             
