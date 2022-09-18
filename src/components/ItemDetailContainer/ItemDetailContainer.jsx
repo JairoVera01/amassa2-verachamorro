@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import {useParams} from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail';
+import db from '../../services';
 
 const ItemDetailContainer = () => {
     const {id} = useParams();
