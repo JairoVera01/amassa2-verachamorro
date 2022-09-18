@@ -3,6 +3,8 @@ import ItemCount from '../ItemCount/ItemCount'
 import {Link} from 'react-router-dom'
 
 const Item = ({id,nombre,precio,stock,imgUrl,descripcion,categoria}) => {
+
+  
   function onAdd (contador) {
     alert(`Se agregaron ${contador} u. de  ${nombre} `);
   }
