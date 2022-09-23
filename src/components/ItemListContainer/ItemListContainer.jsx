@@ -3,38 +3,53 @@ import Hero from '../Hero/Hero';
 import "./ItemListContainer.css"
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, getFirestore,query, where } from 'firebase/firestore';
 import db from '../../services';
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
-    const {categoriaid} = useParams();
+    const {categoria} = useParams();
     useEffect(() => {
-        const getColData = async() =>{
-            try {
-                const data = collection(db,"productos");
-                const col = await getDocs(data);
-                const res = col.docs.map((doc)=> doc={ id:doc.id,...doc.data() } )
-                // setProductos(res)
-                new Promise ((resolve)=>{
-                    let productosFilter = [];
+        
+
+
+        const itemCollection = categoria ? query(collection(db, "productos"), where("categoria", "==", categoria)) : collection(db, "items");
+        getDocs(itemCollection).then((snapshot) => {
+            setProductos(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        })
+
+        // const getColData = async() =>{
+        //     try {
+        //         const data = collection(db,"productos");
+        //         const col = await getDocs(data);
+
+
+        //         const res = col.docs.map((doc)=> doc={ id:doc.id,...doc.data() } )
+        //         // setProductos(res)
+        //         new Promise ((resolve)=>{
+        //             let productosFilter = [];
                     
-                        productosFilter = categoriaid ? res.filter((element)=>element.categoria === categoriaid) : res;
-                        resolve(productosFilter);
+        //                 productosFilter = categoriaid ? res.filter((element)=>element.categoria === categoriaid) : res;
+        //                 resolve(productosFilter);
                     
-                }).then((res)=>{
-                    setProductos(res);
-                })
+        //         }).then((res)=>{
+        //             setProductos(res);
+        //         })
                 
-            } catch (error) {
-                console.log(error);
-            }
-        } 
-        getColData();
-        return () => {
-        }
-    }, [categoriaid])
+        //     } catch (error) {
+        //         console.log(error);
+        //     }
+        // } 
+
+        // getColData();
+
+        
+        // return () => {
+        // }
+
+
+    }, [categoria])
     
 
     return (
