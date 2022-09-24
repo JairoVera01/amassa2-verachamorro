@@ -47,6 +47,9 @@ const Cart = () => {
             Precio total de la compra = S/.{items.reduce((pv,cv)=> pv + (cv.precio*cv.quantity),0)}
             <div>
                 <button className="btn btn-dark" onClick={clear}>Limpiar</button>
+                <Link to="/checkout">
+                    <button >CheckOut </button>
+                </Link>
             </div>
         </div>
     </>
