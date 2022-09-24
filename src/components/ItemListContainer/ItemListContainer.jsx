@@ -14,7 +14,7 @@ const ItemListContainer = () => {
         
 
 
-        const itemCollection = categoria ? query(collection(db, "productos"), where("categoria", "==", categoria)) : collection(db, "items");
+        const itemCollection = categoria ? query(collection(db, "productos"), where("categoria", "==", categoria)) : collection(db, "productos");
         getDocs(itemCollection).then((snapshot) => {
             setProductos(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         })
