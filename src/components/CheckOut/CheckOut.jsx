@@ -18,10 +18,6 @@ const CheckOut = () => {
             total: items.reduce((pv,cv)=> pv + (cv.quantity* cv.precio),0)
         };
         const orderCollection = collection(db,"orderd");
-        // const data = {
-        //     name: "Raja Tamil",
-        //     country: "Canada"
-        //  };
         console.log(order)
         addDoc(orderCollection,order).then(({id})=>{
             console.log(id);
