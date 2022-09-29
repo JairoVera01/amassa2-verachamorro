@@ -6,10 +6,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 
-
-const NavBar = () => {
-    // const navBarItems = ["Inicio"]
-    
+const NavBar = () => {    
     const {items} = useContext(CartContext);
     return (
         <div>
@@ -25,12 +22,6 @@ const NavBar = () => {
                     </button>
                     <div className="collapse navbar-collapse fontsBaloo" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            {/* {navBarItems.map((item)=>(
-                                <li className="nav-item">
-                                    <a className="nav-link mt-1" href="/">{item}</a>
-                                </li>
-                            ))}  */}
-                            
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle mt-1" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorias
