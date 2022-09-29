@@ -24,7 +24,7 @@ const BootstrapNavBar = () => {
                     <div className="collapse navbar-collapse fontsBaloo" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
-                                <p className="nav-link dropdown-toggle mt-1"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p className="nav-link dropdown-toggle mt-3"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorias
                                 </p>
                                 <ul className="dropdown-menu"> 

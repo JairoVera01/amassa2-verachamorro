@@ -19,34 +19,6 @@ const ItemListContainer = () => {
             setProductos(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         })
 
-        // const getColData = async() =>{
-        //     try {
-        //         const data = collection(db,"productos");
-        //         const col = await getDocs(data);
-
-
-        //         const res = col.docs.map((doc)=> doc={ id:doc.id,...doc.data() } )
-        //         // setProductos(res)
-        //         new Promise ((resolve)=>{
-        //             let productosFilter = [];
-                    
-        //                 productosFilter = categoriaid ? res.filter((element)=>element.categoria === categoriaid) : res;
-        //                 resolve(productosFilter);
-                    
-        //         }).then((res)=>{
-        //             setProductos(res);
-        //         })
-                
-        //     } catch (error) {
-        //         console.log(error);
-        //     }
-        // } 
-
-        // getColData();
-
-        
-        // return () => {
-        // }
 
 
     }, [categoria])

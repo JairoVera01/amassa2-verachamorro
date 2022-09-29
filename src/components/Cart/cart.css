@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+.txtResumenCompra{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tituloCarrito{
+    margin-top: 125px !important;
+    font-family: 'Baloo 2', cursive;
+    font-size: 40px;
+}
+
+.precioTotal{
+    font-family: 'Baloo 2', cursive;
+    font-size: 22px;
+}

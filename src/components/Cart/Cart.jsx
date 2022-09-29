@@ -1,48 +1,53 @@
 import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import "./cart.css"
 
 const Cart = () => {
     const {items, removeItem, clear} =useContext(CartContext);
-    // console.log(items);
     
     return (
     <>
         <div className="container">
-            <p className="mt-5 pt-5 h3">Carrito de compras</p>
+            <p className=" tituloCarrito">Carrito de compras</p>
             {!items.length ? 
             <p className="mt-5 fw-bold">
-                No hay items
+                No hay items en su carrito.
                 <Link to="/">
                     <br />
-                    <button className="btn btn-dark ">Ir al inicio</button>
+                    <button className="btn btn-dark mt-4 mb-4">Comprar productos</button>
                 </Link>
             </p>:
-                items.length && <ol>
+                items.length && <ol className="listaCarrito">
+                    <p className="text-start txtResumenCompra pb-3">Resumen de compra: </p>
                     {items.map(((item,indx)=> 
-                    <li key={indx}>
+                    <li key={indx} className="listaCarrito">
                         <div className="row row-cols-1 row-cols-md-2">
                             <div className="col">
                                 <img src={item.imgUrl} alt="" className="w-25 img-thumbnail" />
                             </div>
                             <div className="col text-start">
-                            {item.nombre} - {item.quantity}
+                                <p>Producto:  {item.nombre}</p>
+                                <p>Cantidad seleccionada: {item.quantity} unidades</p>
                                 <p>Precio por unidad {item.precio}</p>
+                                <hr />
+                                <p>Subtotal: {items.reduce((pv,cv)=>cv.precio*cv.quantity,0)}</p>
                                 <br></br>
-                                <button className="btn btn-dark" onClick={()=>removeItem(item.id)}>Remover</button>
+                                <button className="btn btn-danger" onClick={()=>removeItem(item.id)}>Remover</button>
+                                
                             </div>
                         </div>
-                        
+                        <hr />
                     </li>      
                     ))}
                 </ol>
             }
-            <hr />
-            Precio total de la compra = S/.{items.reduce((pv,cv)=> pv + (cv.precio*cv.quantity),0)}
+            <p className="precioTotal"> Precio total de la compra = S/.{items.reduce((pv,cv)=> pv + (cv.precio*cv.quantity),0)}</p>
+           
             <div>
-                <button className="btn btn-dark" onClick={clear}>Limpiar</button>
+                <button className="btn btn-dark m-2" onClick={clear}>Limpiar</button>
                 <Link to="/checkout">
-                    <button >CheckOut </button>
+                    <button className="btn btn-success m-2">CheckOut - Finalizar Compra </button>
                 </Link>
             </div>
         </div>

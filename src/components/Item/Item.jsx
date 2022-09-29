@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+
 const Item = ({id,nombre,precio,stock,imgUrl,descripcion,categoria}) => {
 
   
@@ -19,11 +20,12 @@ const Item = ({id,nombre,precio,stock,imgUrl,descripcion,categoria}) => {
           <div className="card-body">
             <Link to={`/item/${id}`}>
               <img className='w-75' src={imgUrl} alt="" />
+              
             </Link>
             <br></br>
             <small className="text-muted fw-light">Categoria {categoria}</small>
             <p>Precio: S/.{precio}</p>
-            <p>Stock disponible {stock} u.</p>
+            <p>Stock disponible: {stock} u.</p>
             
             <Link to={`/item/${id}`}>
               <button className="btn btn-dark mt-2">Ver detalles</button>

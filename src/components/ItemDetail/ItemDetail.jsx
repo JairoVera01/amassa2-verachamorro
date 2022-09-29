@@ -33,7 +33,13 @@ const ItemDetail = ({item}) => {
                 <div className="col">
                     <div className="row">
                         <div className="col">
-                            <img src={imgUrl} alt="" className=" w-50 img-thumbnail rounded "/>
+                            <div className="imgHover "> 
+                                <div>
+                                    <figure><img src={imgUrl} alt="" className=" w-50 img-thumbnail rounded "/></figure>
+                                    
+                                </div>
+                            </div>
+                            
                             {/* { counter ? <Link to="/Cart"> <button className="btn btn-dark">Finalizar Compra</button> </Link> :<ItemCount stock={stock} initial={1} onAdd={onAdd}  />} */}
                             <ItemCount stock={stock} initial={1} onAdd={onAdd}  />
                             <Link to="/cart"> <button className="btn btn-success mt-4">Ir al carrito</button> </Link> 
@@ -42,8 +48,8 @@ const ItemDetail = ({item}) => {
                             <p className="productoComponentes"><u>Producto:</u>  <small>{nombre}</small> </p> 
                             <p className="productoComponentes"><u>Detalles:</u> <small> {descripcion}</small></p>
                             <p className="productoComponentes"><u>Categoria:</u>  <small></small> {categoria}</p>
-                            <p className="productoComponentes"><u>Precio por unidad S/.</u> <small>{precio}</small> </p>
-                            <p className="productoComponentes"><u>Stock disponible</u>  <small>{stock}</small>  u.</p>
+                            <p className="productoComponentes"><u>Precio por unidad: </u> <small> S/. {precio}</small> </p>
+                            <p className="productoComponentes"><u>Stock disponible: </u>  <small>{stock}</small>  u.</p>
                         </div>
                     </div>
                 </div>
