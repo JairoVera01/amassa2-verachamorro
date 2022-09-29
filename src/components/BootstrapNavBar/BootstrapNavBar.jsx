@@ -1,9 +1,10 @@
 import React, {useContext} from 'react'
 import "./bootstrapNavBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
-import CartWidget from '../CartWidget/CartWidget';
+// import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import CarritoWidget from '../CarritoWidget/CarritoWidget';
 
 
 const BootstrapNavBar = () => {
@@ -40,7 +41,8 @@ const BootstrapNavBar = () => {
                             </li>
                             
                         </ul>
-                        <CartWidget/>
+                        {/* <CartWidget/> */}
+                        <CarritoWidget/>
                     </div>
                 </div>
             </nav>
