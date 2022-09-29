@@ -7,15 +7,15 @@ Realizado por: Frank Jairo Vera Chamorro
 Proyecto E-Commerce para venta de postres.
 Tecnologías usadas: 
 <hr>
-- React Js
-- Bootstrap 5.2.1
-- Firebase 9 
-- SweetAlert 2
-
+- React Js <br>
+- Bootstrap 5.2.1 <br>
+- Firebase 9  <br>
+- SweetAlert 2 <br>
+<br>
 Enlaces:
 <hr>
-- Link deploy : https://amassa2-verachamorro-wbj7.vercel.app/
-- Link repo : https://github.com/JairoVera01/amassa2-verachamorro.git
+- Link deploy : https://amassa2-verachamorro-wbj7.vercel.app/ <br>
+- Link repo : https://github.com/JairoVera01/amassa2-verachamorro.git <br>
 
 <hr>
 <h3 align="left">Lenguajes y herramientas usadas: </h3>
