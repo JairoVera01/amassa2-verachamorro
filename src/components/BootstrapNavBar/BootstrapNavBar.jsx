@@ -1,13 +1,12 @@
 import React, {useContext} from 'react'
-import "./navBar.css"
+import "./bootstrapNavBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
-// import CartWidget from '../CartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
-import CarritoWidget from '../CarritoWidget/CarritoWidget';
 
 
-const NavBar = () => {    
+const BootstrapNavBar = () => {
     const {items} = useContext(CartContext);
     return (
         <div>
@@ -41,8 +40,7 @@ const NavBar = () => {
                             </li>
                             
                         </ul>
-                        {/* <CartWidget/> */}
-                        <CarritoWidget/>
+                        <CartWidget/>
                     </div>
                 </div>
             </nav>
@@ -51,5 +49,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
-
+export default BootstrapNavBar
