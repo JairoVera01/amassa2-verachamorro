@@ -1,17 +1,11 @@
-
-
-import React , {useContext, useEffect} from 'react';
+import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
-import db from '../../services'
-import { collection, getDocs } from 'firebase/firestore';
 
 const Cart = () => {
     const {items, removeItem, clear} =useContext(CartContext);
     // console.log(items);
     
-
-
     return (
     <>
         <div className="container">

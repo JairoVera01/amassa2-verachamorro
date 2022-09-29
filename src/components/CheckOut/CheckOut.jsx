@@ -1,7 +1,7 @@
 import { addDoc, collection } from 'firebase/firestore';
 import React, {useContext, useState} from 'react'
 import {CartContext} from "../../context/CartContext";
-import db from '../../services';
+import db from '../../services/indexFirebase';
 
 const CheckOut = () => {
 
