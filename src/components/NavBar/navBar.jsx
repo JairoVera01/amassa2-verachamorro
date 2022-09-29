@@ -13,7 +13,7 @@ const NavBar = () => {
             <nav className="navbar navbar-expand-lg bg-amassa2 fixed-top">
                 <div className="container">
                     <Link to="/">
-                        <span className="navbar-brand" href="/">
+                        <span className="navbar-brand" >
                             <img src={logoAmassa2} alt="logo" className="navBarLogo"/>
                         </span>
                     </Link>
@@ -23,9 +23,9 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse fontsBaloo" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle mt-1" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p className="nav-link dropdown-toggle mt-1"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorias
-                                </a>
+                                </p>
                                 <ul className="dropdown-menu"> 
                                     <Link to="/categoria/Alfajores">
                                         <li><p className="dropdown-item enlaceCategorias">Alfajores</p></li>
@@ -40,7 +40,7 @@ const NavBar = () => {
                             </li>
                             
                         </ul>
-                        {!!items.length &&<CartWidget/>}
+                        <CartWidget/>
                     </div>
                 </div>
             </nav>
