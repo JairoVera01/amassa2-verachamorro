@@ -6,7 +6,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import CheckOut from './components/CheckOut/CheckOut';
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from './components/NavBar/NavBar';
+
 
 function App() {
   return (
