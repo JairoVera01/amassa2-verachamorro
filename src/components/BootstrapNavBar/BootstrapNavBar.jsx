@@ -1,11 +1,8 @@
 import React from 'react'
 import "./bootstrapNavBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
-// import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
-
 import CarritoWidget from '../CarritoWidget/CarritoWidget';
-
 
 const BootstrapNavBar = () => {
     return (
@@ -40,7 +37,6 @@ const BootstrapNavBar = () => {
                             </li>
                             
                         </ul>
-                        {/* <CartWidget/> */}
                         <CarritoWidget/>
                     </div>
                 </div>

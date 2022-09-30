@@ -2,16 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import "./Item.css"
 
-
 const Item = ({id,nombre,precio,stock,imgUrl,descripcion,categoria}) => {
-
-  
-  // function onAdd (contador) {
-  //   alert(`Se JAIROOO agregaron ${contador} u. de  ${nombre} Jairo`);
-  // }
-
-  
-
   return (
     <div className="col mt-4">
       <div className="card mb-4 rounded-3 shadow-sm">

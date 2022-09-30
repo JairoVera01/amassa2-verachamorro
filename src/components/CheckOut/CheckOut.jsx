@@ -77,7 +77,6 @@ const CheckOut = () => {
                     icon : "success",
                     
                 })
-                //Luego limpiar el carrito
             }).catch(error => {
                 console.log(error);
             })

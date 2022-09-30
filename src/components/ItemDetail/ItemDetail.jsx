@@ -13,15 +13,12 @@ const ItemDetail = ({item}) => {
     const [counter,setCounter]=useState(0);
     
     function onAdd (contador) {
-
         const MySwal = withReactContent(Swal)
-
         MySwal.fire({
             title: <p>Producto/s agregados correctamente</p>,
             icon : "success",
             timer : 3500,
         })
-        // alert(`Se agregaron ${contador} u. de  ${nombre} ADASDASD`);
         setCounter(contador);
         addItem(item, contador);
     }
@@ -40,7 +37,6 @@ const ItemDetail = ({item}) => {
                                 </div>
                             </div>
                             
-                            {/* { counter ? <Link to="/Cart"> <button className="btn btn-dark">Finalizar Compra</button> </Link> :<ItemCount stock={stock} initial={1} onAdd={onAdd}  />} */}
                             <ItemCount stock={stock} initial={1} onAdd={onAdd}  />
                             <Link to="/cart"> <button className="btn btn-success mt-4">Ir al carrito</button> </Link> 
                         </div>

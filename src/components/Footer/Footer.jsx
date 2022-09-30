@@ -2,7 +2,6 @@ import React from 'react'
 import "./footer.css"
 import logoAmassa2 from "./amassa2Logo.png";
 
-
 const Footer = () => {
     return (
         <div>
@@ -38,13 +37,13 @@ const Footer = () => {
                         <h5 className="text-uppercase mb-4">Productos</h5>
                         <ul className="list-unstyled">
                         <li className="mb-2">
-                            <p href="#!" className="text-white"><i className="fi fi-rr-cupcake"></i> Alfajores</p>
+                            <p  className="text-white"><i className="fi fi-rr-cupcake"></i> Alfajores</p>
                         </li>
                         <li class="mb-2">
-                            <p href="#!" className="text-white"><i className="fi fi-rr-cupcake"></i> Tortas de alfajor</p>
+                            <p  className="text-white"><i className="fi fi-rr-cupcake"></i> Tortas de alfajor</p>
                         </li>
                         <li className="mb-2">
-                            <p href="#!" className="text-white"><i className="fi fi-rr-cupcake"></i> Bocaditos</p>
+                            <p className="text-white"><i className="fi fi-rr-cupcake"></i> Bocaditos</p>
                         </li>
                         </ul>
                     </div>
@@ -52,16 +51,16 @@ const Footer = () => {
                         <h5 className="text-uppercase mb-4">Sabores</h5>
                         <ul className="list-unstyled">
                             <li className="mb-2">
-                                <p href="#!" className="text-white"><i className="fi fi-rr-cupcake"></i> Tradicional</p>
+                                <p  className="text-white"><i className="fi fi-rr-cupcake"></i> Tradicional</p>
                             </li>
                             <li className="mb-2">
-                                <p href="#!" className="text-white"><i className="fi fi-rr-cupcake"></i> Choco-chip</p>
+                                <p  className="text-white"><i className="fi fi-rr-cupcake"></i> Choco-chip</p>
                             </li>
                             <li className="mb-2">
-                                <p href="#!" className="text-white"><i className="fi fi-rr-cupcake"></i> Cacao</p>
+                                <p  className="text-white"><i className="fi fi-rr-cupcake"></i> Cacao</p>
                             </li>
                             <li className="mb-2">
-                                <p href="#!" className="text-white"><i className="fi fi-rr-cupcake"></i> Marmoleado</p>
+                                <p className="text-white"><i className="fi fi-rr-cupcake"></i> Marmoleado</p>
                             </li>
                         </ul>
                     </div>

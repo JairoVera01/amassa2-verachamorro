@@ -10,7 +10,6 @@ import CheckOut from './components/CheckOut/CheckOut';
 import BootstrapNavBar from './components/BootstrapNavBar/BootstrapNavBar';
 import Footer from './components/Footer/Footer';
 
-
 function App() {
   return (
     

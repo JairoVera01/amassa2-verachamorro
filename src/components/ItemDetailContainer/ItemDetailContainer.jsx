@@ -15,12 +15,8 @@ const ItemDetailContainer = () => {
                 const data = collection(db,"productos");
                 const col = await getDocs(data);
                 const res = col.docs.map((doc)=> doc={ id:doc.id,...doc.data() } )
-                // setProductos(res)
                 new Promise ((resolve)=>{
-                    
-                    
-                        resolve(res.find((element)=> element.id == id));
-                    
+                    resolve(res.find((element)=> element.id == id));
                 }).then((res)=>{
                     setItem(res);
                 })
