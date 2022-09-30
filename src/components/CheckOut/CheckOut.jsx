@@ -75,7 +75,7 @@ const CheckOut = () => {
                 MySwal.fire({
                     title: <p>Compra Exitosa <br></br> <br></br> Su Id de compra es: {id}</p>,
                     icon : "success",
-                    timer : 6500,
+                    
                 })
                 //Luego limpiar el carrito
             }).catch(error => {
@@ -87,7 +87,7 @@ const CheckOut = () => {
 
     return (
         
-        <div className="mt-5 pt-5">
+        <div className="mt-5 pt-5 mb-5 pb-5">
             <div>
                 <p className="tituloCheckOut">Finalizar compra</p>
                 <p className="subtituloCheckOut">Ingrese sus datos personales</p>

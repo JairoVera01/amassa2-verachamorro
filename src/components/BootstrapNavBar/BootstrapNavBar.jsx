@@ -1,14 +1,13 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import "./bootstrapNavBar.css"
 import logoAmassa2 from "./amassa2Logo.png";
 // import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../context/CartContext';
+
 import CarritoWidget from '../CarritoWidget/CarritoWidget';
 
 
 const BootstrapNavBar = () => {
-    const {items} = useContext(CartContext);
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-amassa2 fixed-top">
@@ -24,7 +23,7 @@ const BootstrapNavBar = () => {
                     <div className="collapse navbar-collapse fontsBaloo" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
-                                <p className="nav-link dropdown-toggle "  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p className="nav-link dropdown-toggle pt-3"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorias
                                 </p>
                                 <ul className="dropdown-menu"> 

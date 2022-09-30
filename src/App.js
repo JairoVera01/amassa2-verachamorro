@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart';
 import CheckOut from './components/CheckOut/CheckOut';
 // import NavBar from './components/NavBar/NavBar';
 import BootstrapNavBar from './components/BootstrapNavBar/BootstrapNavBar';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <div className="App ">
       <CartProvider>
         <BrowserRouter>
-          {/* <NavBar/> */}
+          
           <BootstrapNavBar/> 
           <Routes>
             <Route path="/" element={<ItemListContainer/>}/> 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/checkout" element={<CheckOut></CheckOut>}/>
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </CartProvider> 
     </div>   
