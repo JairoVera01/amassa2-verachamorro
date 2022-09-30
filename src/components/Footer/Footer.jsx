@@ -39,7 +39,7 @@ const Footer = () => {
                         <li className="mb-2">
                             <p  className="text-white"><i className="fi fi-rr-cupcake"></i> Alfajores</p>
                         </li>
-                        <li class="mb-2">
+                        <li className="mb-2">
                             <p  className="text-white"><i className="fi fi-rr-cupcake"></i> Tortas de alfajor</p>
                         </li>
                         <li className="mb-2">
