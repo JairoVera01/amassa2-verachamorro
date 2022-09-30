@@ -1,0 +1,14 @@
+.btnDetalles{
+    background-color: brown;
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+    
+}
+
+.btnDetalles:hover{
+    background-color: white;
+    color: brown;
+    border: 1.3px solid;
+    
+}
