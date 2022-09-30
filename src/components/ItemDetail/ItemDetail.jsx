@@ -30,7 +30,7 @@ const ItemDetail = ({item}) => {
     return (
         <div className="container">
             <div className="row mt-5 pt-5 mb-5">
-                <div className="col">
+                <div className="col mt-5">
                     <div className="row">
                         <div className="col">
                             <div className="imgHover "> 

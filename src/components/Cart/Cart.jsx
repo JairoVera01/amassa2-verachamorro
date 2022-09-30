@@ -31,7 +31,8 @@ const Cart = () => {
                                 <p>Cantidad seleccionada: {item.quantity} unidades</p>
                                 <p>Precio por unidad {item.precio}</p>
                                 <hr />
-                                <p>Subtotal: {items.reduce((pv,cv)=>cv.precio*cv.quantity,0)}</p>
+                                <p><i> Subtotal: S/.{items.reduce((pv,cv)=> (item.precio)*(item.quantity),0)}</i></p>
+                                
                                 <br></br>
                                 <button className="btn btn-danger" onClick={()=>removeItem(item.id)}>Remover</button>
                                 
@@ -42,10 +43,9 @@ const Cart = () => {
                     ))}
                 </ol>
             }
-            <p className="precioTotal"> Precio total de la compra = S/.{items.reduce((pv,cv)=> pv + (cv.precio*cv.quantity),0)}</p>
-           
-            <div>
-                <button className="btn btn-dark m-2" onClick={clear}>Limpiar</button>
+            <p className="precioTotal"> Precio total de la compra = S/. {items.reduce((pv,cv)=> pv + (cv.precio*cv.quantity),0)}</p>
+            <div className="mb-5">
+                <button className="btn btn-warning m-2" onClick={clear}>Limpiar carrito</button>
                 <Link to="/checkout">
                     <button className="btn btn-success m-2">CheckOut - Finalizar Compra </button>
                 </Link>
